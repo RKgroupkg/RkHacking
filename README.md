@@ -1,4 +1,4 @@
-Author: 4lbH4cker
+Author: RKgroup
 ### Version 4
 
 (![image](https://raw.githubusercontent.com/4lbH4cker/ALHacking/main/alhacking.png)
@@ -29,6 +29,3 @@ works on any of the following operating systems:
 
 We are not responsible for any misuse or damage caused by this program. Use this tool at your own risk!
 
-
-❤️ Support me:
-https://www.paypal.me/Relvllahi
