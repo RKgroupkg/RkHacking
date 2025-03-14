@@ -75,7 +75,7 @@ bordered_text() {
 display_header() {
     echo
     center_text "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" "$PURPLE"
-    center_text "┃                 PKH4CKER TOOLS $VERSION                ┃" "$RED"
+    center_text "┃                 RKH4CKER TOOLS $VERSION                ┃" "$RED"
     center_text "┃        ADVANCED SECURITY & PENTESTING SUITE        ┃" "$CYAN"
     center_text "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" "$PURPLE"
     echo
@@ -87,7 +87,7 @@ display_header() {
 display_footer() {
     echo
     center_text "╔═════════════════════════════════════════════════╗" "$BLUE"
-    center_text "║  PRESS CTRL+C TO EXIT • PRESS H FOR HELP GUIDE  ║" "$YELLOW"
+    center_text "║  RRESS CTRL+C TO EXIT • PRESS H FOR HELP GUIDE  ║" "$YELLOW"
     center_text "╚═════════════════════════════════════════════════╝" "$BLUE"
     echo
 }
@@ -197,7 +197,7 @@ display_help_guide() {
     echo
     
     echo -e "${CYAN}ABOUT THIS TOOLKIT:${RESET}"
-    echo -e "  PkHacker Tools is a comprehensive collection of security and penetration"
+    echo -e "  RkHacker Tools is a comprehensive collection of security and penetration"
     echo -e "  testing tools designed for educational purposes and ethical use only."
     echo
     
@@ -251,33 +251,33 @@ display_menu() {
     display_header
     
     center_text "《 ESSENTIAL TOOLS 》" "$YELLOW"
-    menu_item "1" "Setup & Update" "Install required packages"
-    menu_item "2" "Zphisher" "Advanced phishing toolkit"
-    menu_item "3" "CamPhish" "Camera phishing tool"
-    menu_item "4" "Subscan" "Fast subdomain scanner"
+    menu_item "1" "Setup & Update" "Install"
+    menu_item "2" "Zphisher" "Phishing"
+    menu_item "3" "CamPhish" "Camera Hack"
+    menu_item "4" "Subscan" "Scanner"
     echo
     
     center_text "《 NETWORK & WEB TOOLS 》" "$YELLOW"
-    menu_item "5" "Fast Mail Bomber" "Email stress testing tool"
-    menu_item "6" "DDoS-Ripper" "DDoS attack simulation"
-    menu_item "7" "Help Guide" "Comprehensive usage guide"
-    menu_item "8" "Uninstall Tools" "Remove all installed tools"
+    menu_item "5" "Fast Mail Bomber" "Email ddos"
+    menu_item "6" "DDoS-Ripper" "DDoS attack"
+    menu_item "7" "Help Guide" "Usage guide"
+    menu_item "8" "Uninstall Tools" " "
     echo
     
     center_text "《 INFORMATION GATHERING 》" "$YELLOW"
-    menu_item "9" "IP Tracker" "Get detailed IP information"
-    menu_item "10" "Dorks-Eye" "Google dorks finder tool"
-    menu_item "11" "HackerPro" "All-in-one hacking tool"
-    menu_item "12" "RED_HAWK" "Website vulnerability scanner"
+    menu_item "9" "IP Tracker" "IP information"
+    menu_item "10" "Dorks-Eye" "Dorks tool"
+    menu_item "11" "HackerPro" "Hacking tool"
+    menu_item "12" "RED_HAWK" "vuln- scanner"
     echo
     
     center_text "《 ADVANCED TOOLS 》" "$YELLOW"
-    menu_item "13" "VirusCrafter" "Create virus for testing"
-    menu_item "14" "Info-Site" "Website information tool"
-    menu_item "15" "BadMod" "CMS vulnerability scanner"
-    menu_item "16" "Facebash" "Facebook brute force tool"
-    menu_item "17" "DARKARMY" "Penetration testing toolkit"
-    menu_item "18" "AUTO-IP-CHANGER" "Auto rotate IP via Tor"
+    menu_item "13" "VirusCrafter" "Create virus"
+    menu_item "14" "Info-Site" "Website info"
+    menu_item "15" "BadMod" "CMS vuln- scan"
+    menu_item "16" "Facebash" "Facebook brute"
+    menu_item "17" "DARKARMY" "Penetration"
+    menu_item "18" "AUTO-IP-CHANGER" "Auto IP "
     echo
     
     display_footer
