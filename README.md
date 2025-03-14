@@ -1,86 +1,81 @@
 # ALHacking - Ethical Hacking Toolkit
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/4lbH4cker/ALHacking/main/alhacking.png" alt="ALHacking Logo" width="300px">
+  <img src="https://raw.githubusercontent.com/RKgroupkg/RkHacking/main/RkHacks.jpg" alt="RkHacking Logo" width="300px">
   <br>
   <em>A comprehensive toolkit for security assessment and ethical penetration testing</em>
 </div>
 
-## 📌 Overview
+## Overview
 
-ALHacking is a collection of powerful tools designed for ethical security testing, including:
+RkHacking provides security professionals with essential tools for ethical testing, including:
 
 - Social media security assessment
-- Phone information gathering
-- Gmail security testing
+- Phone intelligence gathering
+- Gmail security evaluation
 - Phone number reconnaissance
 - User discovery techniques
-- Webcam security testing
-- Powerful DDOS testing capabilities
+- Webcam security analysis
+- DDOS testing capabilities
 
-## 🎥 Demo
+## Compatible Systems
 
-Check out ALHacking in action on YouTube:  
-[ALHacking Demo Video](https://www.youtube.com/watch?v=zgdq6ErscqY)
-
-## 💻 Compatible Operating Systems
-
-ALHacking works on the following platforms:
-
-- **Android** (via Termux application)
+- **Android** (via Termux)
 - **Linux** (Debian-based distributions)
 - **Unix** systems
 
-## ⚙️ Installation Guide
+## Installation
 
 ```bash
-# Install git if not already installed
+# Install git if needed
 pkg install git
 
 # Clone the repository
-git clone https://github.com/4lbH4cker/ALHacking
+git clone https://github.com/RKgroupkg/RkHacking.git
 
-# Navigate to the ALHacking directory
-cd ALHacking
+# Navigate to directory
+cd RkHacking
 
-# Run the main script
-bash alhack.sh
+# Run the toolkit
+bash rkhack.sh
 ```
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
-### Common Issues:
+- **Permission Denied**: Run `chmod +x rkhack.sh`
+- **Termux Issues**: Ensure proper app permissions are granted
 
-1. **Permission Denied**: If you encounter permission issues, run:
-   ```bash
-   chmod +x alhack.sh
-   ```
+## Disclaimer
 
-2. **Dependencies Missing**: If you're missing dependencies, run:
-   ```bash
-   bash setup.sh
-   ```
-   or
-   ```bash
-   pkg install python3 python3-pip
-   pip3 install -r requirements.txt
-   ```
+This toolkit is for **ETHICAL TESTING ONLY**.
 
-3. **Termux Issues**: Make sure you've granted Termux the necessary permissions on your Android device.
+- Use exclusively on systems you own or have explicit permission to test
+- Not responsible for misuse or resulting damages
+- Illegal use is prohibited
 
-## ⚠️ Disclaimer
+## License
 
-**IMPORTANT**: This toolkit is designed for **ETHICAL TESTING ONLY**. 
+Released under [Mit] - see LICENSE file for details.
 
-- Use only on systems you own or have explicit permission to test
-- We are not responsible for any misuse or damage caused by this program
-- Usage for illegal activities is strictly prohibited
-- Use this tool at your own risk
 
-## 📜 License
+## Credit:-
+This is fully inspired by an Albanian hacking tool named Al-hacking tool
 
-This project is released under [License Name] - see the LICENSE file for details.
+◇ https://github.com/4lbH4cker/ALHacking
 
-## 👥 Author
+
+## Author
 
 RKgroup (Version 4)
+
+<p align="center">
+  <a href="https://t.me/rkgroup_update">
+    <img src="https://img.shields.io/static/v1?label=Join&message=Telegram%20Channel&color=blueviolet&style=for-the-badge&logo=telegram&logoColor=white" alt="Rkgroup Channel" />
+  </a>
+  <a href="https://telegram.me/Rkgroup_helpbot">
+    <img src="https://img.shields.io/static/v1?label=Join&message=Telegram%20Group&color=blueviolet&style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Group" />
+  </a>
+</p>
+
+
+-------
