@@ -272,37 +272,131 @@ display_help_guide() {
 
 # Display main menu with enhanced formatting and organization
 display_menu() {
+    # Get terminal width for dynamic sizing
+    COLUMNS=$(tput cols)
+    
+    # Calculate box width based on terminal size
+    BOX_WIDTH=$((COLUMNS > 80 ? 76 : COLUMNS - 4))
+    
+    
+    # Function to create a horizontal line with custom character
+    create_line() {
+        local char="$1"
+        local width="$2"
+        printf '%*s\n' "$width" | tr ' ' "$char"
+    }
+    
+    clear
     display_header
     
-    center_text "《 ESSENTIAL TOOLS 》" "$YELLOW"
-    menu_item "[1.]" "Setup & Update" ""
-    menu_item "[2.]" "Zphisher" ""
-    menu_item "[3.]" "CamPhish" ""
-    menu_item "[4.]" "Subscan" ""
-    echo
+    # Top border with gradient
+    printf "╭"
+    create_line "═" $((BOX_WIDTH - 2)) | tr -d '\n'
+    printf "╮\n"
     
-    center_text "《 NETWORK & WEB TOOLS 》" "$YELLOW"
-    menu_item "[5.]" "Fast Mail Bomber" ""
-    menu_item "[6.]" "DDoS-Ripper" ""
-    menu_item "[7.]" "Help Guide" ""
-    menu_item "[8.]" "Uninstall Tools" ""
-    echo
+    # Title section
+    printf "│%${BOX_WIDTH}s│\n" ""
+    center_text "🌟 CYBERSECURITY TOOLKIT 🌟" $BOX_WIDTH | sed 's/^/│/' | sed 's/$/│/'
+    printf "│%${BOX_WIDTH}s│\n" ""
     
-    center_text "《 INFORMATION GATHERING 》" "$YELLOW"
-    menu_item "[9.]" "IP Tracker" ""
-    menu_item "[10.]" "Dorks-Eye" ""
-    menu_item "[11.]" "HackerPro" ""
-    menu_item "[12.]" "RED_HAWK" ""
-    echo
+    # Separator
+    printf "├"
+    create_line "─" $((BOX_WIDTH - 2)) | tr -d '\n'
+    printf "┤\n"
     
-    center_text "《 ADVANCED TOOLS 》" "$YELLOW"
-    menu_item "[13.]" "VirusCrafter" ""
-    menu_item "[14.]" "Info-Site" ""
-    menu_item "[15.]" "BadMod" ""
-    menu_item "[16.]" "Facebash" ""
-    menu_item "[17.]" "DARKARMY" ""
-    menu_item "[18.]" "AUTO-IP-CHANGER" ""
-    echo
+    # Calculate column sizes for options
+    COL_WIDTH=$(( (BOX_WIDTH - 6) / 2 ))
+    
+    # Section 1: Essential Tools
+    printf "│%${BOX_WIDTH}s│\n" ""
+    center_text "⚡ ESSENTIAL TOOLS ⚡" $BOX_WIDTH | sed 's/^/│/' | sed 's/$/│/'
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    # Two column layout for options
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[01] ► Setup & Update"
+    printf "%-${COL_WIDTH}s" "[02] ► Zphisher"
+    printf "  │\n"
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[03] ► CamPhish"
+    printf "%-${COL_WIDTH}s" "[04] ► Subscan"
+    printf "  │\n"
+    
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    # Section 2: Network & Web Tools
+    printf "├"
+    create_line "─" $((BOX_WIDTH - 2)) | tr -d '\n'
+    printf "┤\n"
+    
+    printf "│%${BOX_WIDTH}s│\n" ""
+    center_text "⚙ NETWORK & WEB TOOLS ⚙" $BOX_WIDTH | sed 's/^/│/' | sed 's/$/│/'
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[05] ► Fast Mail Bomber"
+    printf "%-${COL_WIDTH}s" "[06] ► DDoS-Ripper"
+    printf "  │\n"
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[07] ► Help Guide"
+    printf "%-${COL_WIDTH}s" "[08] ► Uninstall Tools"
+    printf "  │\n"
+    
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    # Section 3: Information Gathering
+    printf "├"
+    create_line "─" $((BOX_WIDTH - 2)) | tr -d '\n'
+    printf "┤\n"
+    
+    printf "│%${BOX_WIDTH}s│\n" ""
+    center_text "🔍 INFORMATION GATHERING 🔍" $BOX_WIDTH | sed 's/^/│/' | sed 's/$/│/'
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[09] ► IP Tracker"
+    printf "%-${COL_WIDTH}s" "[10] ► Dorks-Eye"
+    printf "  │\n"
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[11] ► HackerPro"
+    printf "%-${COL_WIDTH}s" "[12] ► RED_HAWK"
+    printf "  │\n"
+    
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    # Section 4: Advanced Tools
+    printf "├"
+    create_line "─" $((BOX_WIDTH - 2)) | tr -d '\n'
+    printf "┤\n"
+    
+    printf "│%${BOX_WIDTH}s│\n" ""
+    center_text "🛠️ ADVANCED TOOLS 🛠️" $BOX_WIDTH | sed 's/^/│/' | sed 's/$/│/'
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[13] ► VirusCrafter"
+    printf "%-${COL_WIDTH}s" "[14] ► Info-Site"
+    printf "  │\n"
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[15] ► BadMod"
+    printf "%-${COL_WIDTH}s" "[16] ► Facebash"
+    printf "  │\n"
+    
+    printf "│  "
+    printf "%-${COL_WIDTH}s" "[17] ► DARKARMY"
+    printf "%-${COL_WIDTH}s" "[18] ► AUTO-IP-CHANGER"
+    printf "  │\n"
+    
+    printf "│%${BOX_WIDTH}s│\n" ""
+    
+    # Bottom border
+    printf "╰"
+    create_line "═" $((BOX_WIDTH - 2)) | tr -d '\n'
+    printf "╯\n"
     
     display_footer
 }
