@@ -78,6 +78,10 @@ bordered_text() {
     echo -e "${border_color}╚${border_line}╝${RESET}"
 }
 
+# Get terminal width
+get_terminal_width() {
+    tput cols 2>/dev/null || echo 80
+}
 
 # Display header
 display_header() {
