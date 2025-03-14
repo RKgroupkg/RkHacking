@@ -272,21 +272,16 @@ display_help_guide() {
 
 # Display main menu with enhanced formatting and organization
 display_menu() {
-    # Define minimum required terminal width
-    local min_width=60
-    # Get current terminal width
-    local current_width=$(tput cols)
-    
-    # Check if current width is less than minimum
-    if [ $current_width -lt $min_width ]; then
-        echo "Warning: Your terminal width is $current_width columns, but at least $min_width is recommended for proper display."
-        echo "Please increase your terminal width if possible."
-        echo
-    fi
-    
+    # Assume display_header and display_footer are defined elsewhere
     display_header
     
-    echo -e "
+    # Get current terminal width in columns
+    local current_width=$(tput cols)
+    local min_width=60  # Minimum width needed for the full menu (adjust as needed)
+
+    if [ $current_width -ge $min_width ]; then
+        # Full menu with original design
+        echo -e "
     ${CYAN}╭────────────────────────────────────────────────╮${RESET}
     ${CYAN}│${YELLOW}           ⚡ ESSENTIAL TOOLS ⚡                ${CYAN}│${RESET}
     ${CYAN}╰────────────────────────────────────────────────╯${RESET}
@@ -316,6 +311,27 @@ display_menu() {
     ${GREEN}[15]${RESET} ► ${WHITE}BadMod               ${GREEN}[16]${RESET} ► ${WHITE}Facebash${RESET}
     ${GREEN}[17]${RESET} ► ${WHITE}DARKARMY             ${GREEN}[18]${RESET} ► ${WHITE}AUTO-IP-CHANGER${RESET}
     "
+    else
+        # Simplified menu for narrow terminals
+        echo "Terminal width too narrow for full menu. Using simplified version:"
+        echo
+        echo "ESSENTIAL TOOLS:"
+        echo " [01] Setup & Update    [02] Zphisher"
+        echo " [03] CamPhish         [04] Subscan"
+        echo
+        echo "NETWORK & WEB TOOLS:"
+        echo " [05] Fast Mail Bomber [06] DDoS-Ripper"
+        echo " [07] Help Guide       [08] Uninstall Tools"
+        echo
+        echo "INFORMATION GATHERING:"
+        echo " [09] IP Tracker       [10] Dorks-Eye"
+        echo " [11] HackerPro        [12] RED_HAWK"
+        echo
+        echo "ADVANCED TOOLS:"
+        echo " [13] VirusCrafter     [14] Info-Site"
+        echo " [15] BadMod           [16] Facebash"
+        echo " [17] DARKARMY         [18] AUTO-IP-CHANGER"
+    fi
     
     display_footer
 }
