@@ -272,6 +272,18 @@ display_help_guide() {
 
 # Display main menu with enhanced formatting and organization
 display_menu() {
+    # Define minimum required terminal width
+    local min_width=60
+    # Get current terminal width
+    local current_width=$(tput cols)
+    
+    # Check if current width is less than minimum
+    if [ $current_width -lt $min_width ]; then
+        echo "Warning: Your terminal width is $current_width columns, but at least $min_width is recommended for proper display."
+        echo "Please increase your terminal width if possible."
+        echo
+    fi
+    
     display_header
     
     echo -e "
