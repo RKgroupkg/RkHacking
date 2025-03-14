@@ -41,6 +41,13 @@ C="$CYAN"
 W="$WHITE"
 N="$RESET"
 
+# Font styles
+BOLD="\033[1m"
+DIM="\033[2m"
+ITALIC="\033[3m"
+UNDERLINE="\033[4m"
+
+
 # Terminal size detection
 COLS=$(tput cols)
 WIDTH=$((COLS > 100 ? 100 : COLS - 4))
@@ -71,45 +78,58 @@ bordered_text() {
     echo -e "${border_color}╚${border_line}╝${RESET}"
 }
 
-# Display fancy header
+
+# Display header
 display_header() {
-    echo
-    center_text "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" "$PURPLE"
-    center_text "┃                 RKH4CKER TOOLS $VERSION                ┃" "$RED"
-    center_text "┃        ADVANCED SECURITY & PENTESTING SUITE        ┃" "$CYAN"
-    center_text "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" "$PURPLE"
-    echo
-    center_text "Coded by RKGroup • github.com/RKgroupkg • $BUILD_DATE" "$GREEN"
-    echo
+    clear
+    local width=$(get_terminal_width)
+    local header_text="╭────────[ Rk HACKERS TOOLKIT ]────────╮"
+    local padding=$(( (width - ${#header_text}) / 2 ))
+    
+    printf "\n${BLUE}%${padding}s${header_text}%${padding}s${RESET}\n\n" "" ""
 }
 
-# Display footer with improved information
 display_footer() {
-    echo
-    center_text "╔═════════════════════════════════════════════════╗" "$BLUE"
-    center_text "║  RRESS CTRL+C TO EXIT • PRESS H FOR HELP GUIDE  ║" "$YELLOW"
-    center_text "╚═════════════════════════════════════════════════╝" "$BLUE"
-    echo
+    local width=$(get_terminal_width)
+    local footer_text="╰───────[ press Ctr+C to exit ]───────╯"
+    local padding=$(( (width - ${#footer_text}) / 2 ))
+    
+    printf "\n${BLUE}%${padding}s${footer_text}%${padding}s${RESET}\n\n" "" ""
 }
-
 # Display menu item with improved formatting
 menu_item() {
     local num="$1"
-    local text="$2"
-    local description="$3"
+    local name="$2"
+    local desc="$3"
+    local width=$(get_terminal_width)
+    local half_width=$(( width / 2 - 5 ))
     
-    # Format the number to be two digits with leading zero if needed
-    printf "${WHITE}[%02d]${RESET} ${CYAN}%-18s${RESET}" "$num" "$text"
-    
-    if [ -n "$description" ]; then
-        printf " ${YELLOW}• ${WHITE}%s${RESET}" "$description"
-    fi
-    
-    if (( $num % 2 == 0 )); then
-        echo
+    # If terminal is small, use single column
+    if [ $width -lt 50 ]; then
+        printf " ${CYAN}${BOLD}%2s${RESET}${DIM}.${RESET} ${GREEN}%-15s${RESET} ${DIM}%s${RESET}\n" "$num" "$name" "$desc"
     else
-        printf "%-30s" "" # Space between columns
+        # Print in two columns if even number
+        if [ $(( num % 2 )) -eq 1 ]; then
+            printf " ${CYAN}${BOLD}%2s${RESET}${DIM}.${RESET} ${GREEN}%-15s${RESET} ${DIM}%-${half_width}s${RESET}" "$num" "$name" "$desc"
+        else
+            printf " ${CYAN}${BOLD}%2s${RESET}${DIM}.${RESET} ${GREEN}%-15s${RESET} ${DIM}%s${RESET}\n" "$num" "$name" "$desc"
+        fi
     fi
+}
+
+# Display section divider
+display_section() {
+    local text="$1"
+    local width=$(get_terminal_width)
+    local line_char="─"
+    local line_length=$(( (width - ${#text} - 6) / 2 ))
+    local line=""
+    
+    for ((i=0; i<line_length; i++)); do
+        line="${line}${line_char}"
+    done
+    
+    printf "\n${PURPLE}${line}┤ ${YELLOW}${BOLD}%s${RESET}${PURPLE} ├${line}${RESET}\n" "$text"
 }
 
 # Improved loading animation with spinner
