@@ -275,33 +275,33 @@ display_menu() {
     display_header
     
     center_text "《 ESSENTIAL TOOLS 》" "$YELLOW"
-    menu_item "1" "Setup & Update" "Install"
-    menu_item "2" "Zphisher" "Phishing"
-    menu_item "3" "CamPhish" "Camera Hack"
-    menu_item "4" "Subscan" "Scanner"
+    menu_item "[1.]" "Setup & Update" ""
+    menu_item "[2.]" "Zphisher" ""
+    menu_item "[3.]" "CamPhish" ""
+    menu_item "[4.]" "Subscan" ""
     echo
     
     center_text "《 NETWORK & WEB TOOLS 》" "$YELLOW"
-    menu_item "5" "Fast Mail Bomber" "Email ddos"
-    menu_item "6" "DDoS-Ripper" "DDoS attack"
-    menu_item "7" "Help Guide" "Usage guide"
-    menu_item "8" "Uninstall Tools" " "
+    menu_item "[5.]" "Fast Mail Bomber" ""
+    menu_item "[6.]" "DDoS-Ripper" ""
+    menu_item "[7.]" "Help Guide" ""
+    menu_item "[8.]" "Uninstall Tools" ""
     echo
     
     center_text "《 INFORMATION GATHERING 》" "$YELLOW"
-    menu_item "9" "IP Tracker" "IP information"
-    menu_item "10" "Dorks-Eye" "Dorks tool"
-    menu_item "11" "HackerPro" "Hacking tool"
-    menu_item "12" "RED_HAWK" "vuln- scanner"
+    menu_item "[9.]" "IP Tracker" ""
+    menu_item "[10.]" "Dorks-Eye" ""
+    menu_item "[11.]" "HackerPro" ""
+    menu_item "[12.]" "RED_HAWK" ""
     echo
     
     center_text "《 ADVANCED TOOLS 》" "$YELLOW"
-    menu_item "13" "VirusCrafter" "Create virus"
-    menu_item "14" "Info-Site" "Website info"
-    menu_item "15" "BadMod" "CMS vuln- scan"
-    menu_item "16" "Facebash" "Facebook brute"
-    menu_item "17" "DARKARMY" "Penetration"
-    menu_item "18" "AUTO-IP-CHANGER" "Auto IP "
+    menu_item "[13.]" "VirusCrafter" ""
+    menu_item "[14.]" "Info-Site" ""
+    menu_item "[15.]" "BadMod" ""
+    menu_item "[16.]" "Facebash" ""
+    menu_item "[17.]" "DARKARMY" ""
+    menu_item "[18.]" "AUTO-IP-CHANGER" ""
     echo
     
     display_footer
