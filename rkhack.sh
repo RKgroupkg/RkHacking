@@ -274,35 +274,35 @@ display_help_guide() {
 display_menu() {
     display_header
     
-    echo "
-    ╭────────────────────────────────────────────────╮
-    │           ⚡ ESSENTIAL TOOLS ⚡                │
-    ╰────────────────────────────────────────────────╯
+    echo -e "
+    ${CYAN}╭────────────────────────────────────────────────╮${RESET}
+    ${CYAN}│${YELLOW}           ⚡ ESSENTIAL TOOLS ⚡                ${CYAN}│${RESET}
+    ${CYAN}╰────────────────────────────────────────────────╯${RESET}
     
-    [01] ► Setup & Update       [02] ► Zphisher
-    [03] ► CamPhish             [04] ► Subscan
+    ${GREEN}[01]${RESET} ► ${WHITE}Setup & Update       ${GREEN}[02]${RESET} ► ${WHITE}Zphisher${RESET}
+    ${GREEN}[03]${RESET} ► ${WHITE}CamPhish             ${GREEN}[04]${RESET} ► ${WHITE}Subscan${RESET}
     
-    ╭────────────────────────────────────────────────╮
-    │           ⚙ NETWORK & WEB TOOLS ⚙             │
-    ╰────────────────────────────────────────────────╯
+    ${BLUE}╭────────────────────────────────────────────────╮${RESET}
+    ${BLUE}│${YELLOW}           ⚙ NETWORK & WEB TOOLS ⚙             ${BLUE}│${RESET}
+    ${BLUE}╰────────────────────────────────────────────────╯${RESET}
     
-    [05] ► Fast Mail Bomber     [06] ► DDoS-Ripper
-    [07] ► Help Guide           [08] ► Uninstall Tools
+    ${GREEN}[05]${RESET} ► ${WHITE}Fast Mail Bomber     ${GREEN}[06]${RESET} ► ${WHITE}DDoS-Ripper${RESET}
+    ${GREEN}[07]${RESET} ► ${WHITE}Help Guide           ${GREEN}[08]${RESET} ► ${WHITE}Uninstall Tools${RESET}
     
-    ╭────────────────────────────────────────────────╮
-    │          🔍 INFORMATION GATHERING 🔍           │
-    ╰────────────────────────────────────────────────╯
+    ${PURPLE}╭────────────────────────────────────────────────╮${RESET}
+    ${PURPLE}│${YELLOW}          🔍 INFORMATION GATHERING 🔍           ${PURPLE}│${RESET}
+    ${PURPLE}╰────────────────────────────────────────────────╯${RESET}
     
-    [09] ► IP Tracker           [10] ► Dorks-Eye
-    [11] ► HackerPro            [12] ► RED_HAWK
+    ${GREEN}[09]${RESET} ► ${WHITE}IP Tracker           ${GREEN}[10]${RESET} ► ${WHITE}Dorks-Eye${RESET}
+    ${GREEN}[11]${RESET} ► ${WHITE}HackerPro            ${GREEN}[12]${RESET} ► ${WHITE}RED_HAWK${RESET}
     
-    ╭────────────────────────────────────────────────╮
-    │             🛠️ ADVANCED TOOLS 🛠️               │
-    ╰────────────────────────────────────────────────╯
+    ${RED}╭────────────────────────────────────────────────╮${RESET}
+    ${RED}│${YELLOW}             🛠️ ADVANCED TOOLS 🛠️               ${RED}│${RESET}
+    ${RED}╰────────────────────────────────────────────────╯${RESET}
     
-    [13] ► VirusCrafter         [14] ► Info-Site
-    [15] ► BadMod               [16] ► Facebash
-    [17] ► DARKARMY             [18] ► AUTO-IP-CHANGER
+    ${GREEN}[13]${RESET} ► ${WHITE}VirusCrafter         ${GREEN}[14]${RESET} ► ${WHITE}Info-Site${RESET}
+    ${GREEN}[15]${RESET} ► ${WHITE}BadMod               ${GREEN}[16]${RESET} ► ${WHITE}Facebash${RESET}
+    ${GREEN}[17]${RESET} ► ${WHITE}DARKARMY             ${GREEN}[18]${RESET} ► ${WHITE}AUTO-IP-CHANGER${RESET}
     "
     
     display_footer
