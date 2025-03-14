@@ -277,7 +277,7 @@ display_menu() {
     
     # Get current terminal width in columns
     local current_width=$(tput cols)
-    local min_width=60  # Minimum width needed for the full menu (adjust as needed)
+    local min_width=55 # Minimum width needed for the full menu (adjust as needed)
 
     if [ $current_width -ge $min_width ]; then
         # Full menu with original design
